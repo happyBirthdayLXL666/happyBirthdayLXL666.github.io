@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林心璐的可爱日记</title>
+    <style>
+        body {
+            font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+            background-color: #fff5f7;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+            border-bottom: 2px dashed #ffb6c1;
+        }
+        
+        h1 {
+            color: #e75480;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #888;
+            font-style: italic;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .chat-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .chat-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .chat-img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .date {
+            font-size: 0.8em;
+            color: #999;
+            text-align: right;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            color: #888;
+            border-top: 2px dashed #ffb6c1;
+        }
+        
+        .birthday-wish {
+            background-color: #ffe6eb;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        /* 密码验证层样式 */
+        #passwordOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 245, 247, 0.98);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        
+        .password-box {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        #passwordInput {
+            font-size: 24px;
+            width: 150px;
+            padding: 10px;
+            margin: 20px 0;
+            border: 2px solid #ffb6c1;
+            border-radius: 8px;
+            text-align: center;
+            letter-spacing: 5px;
+        }
+        
+        #hintText {
+            color: #e75480;
+            font-size: 14px;
+            margin-top: 10px;
+            min-height: 20px;
+        }
+        
+        /* 错误动画 */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 密码验证层 -->
+    <div id="passwordOverlay">
+        <div class="password-box">
+            <h2 style="color: #e75480;">🔒 生日密码验证</h2>
+            <input type="password" id="passwordInput" maxlength="4" placeholder="输入四位生日密码"
+                   oninput="this.value = this.value.replace(/\D/g,'')">
+            <p id="hintText">提示：她的生日月份+日期</p>
+        </div>
+    </div>
+
+    <!-- 网页内容 -->
+    <div class="container">
+        <header>
+            <h1>林心璐的可爱日记</h1>
+            <p class="subtitle">记录那些让人会心一笑的瞬间</p>
+        </header>
+        
+        <div class="birthday-wish">
+            <h2>生日快乐！🎉</h2>
+            <p>整理了一些我们聊天中你特别可爱的时刻，希望你喜欢这份特别的生日礼物~</p>
+            <p>愿新的一岁开心常伴，笑容常在！</p>
+        </div>
+        
+        <div class="gallery">
+            <!-- 聊天记录1 -->
+            <div class="chat-item">
+                <img src="img/林心璐承认自己可爱_换头像.jpg" alt="聊天记录截图" class="chat-img">
+                <p>"那我还是可爱的" - 自信又俏皮的宣言！ 😄</p>
+                <p class="date">2023.09.24</p>
+            </div>
+
+            <!-- 聊天记录1 -->
+            <div class="chat-item">
+                <img src="img/有自知之明的林心璐.jpg" alt="聊天记录截图：自己几斤几两我还是知道的" class="chat-img">
+                <p>"自己几斤几两我还是知道的" - 这种清醒的自嘲太可爱了 😄</p>
+                <p class="date">2023.09.24</p>
+            </div>
+            
+            <!-- 聊天记录2 -->
+            <div class="chat-item">
+                <img src="img/林心璐说小猫咪可爱.jpg" alt="聊天记录截图" class="chat-img">
+                <p>这个小猫咪真的太可爱了！</p>
+                <p class="date">2025.03.21</p>
+            </div>
+            
+            <!-- 聊天记录2 -->
+            <div class="chat-item">
+                <img src="img/林心璐说小猫咪可爱.jpg" alt="动漫风格插画：小女孩侧卧" class="chat-img">
+                <p>安静侧卧的样子，像只慵懒的小猫咪~</p>
+                <p class="date">2025.03.21</p>
+            </div>
+            
+            <!-- 聊天记录3 -->
+            <div class="chat-item">
+                <img src="img/哭哭的林心璐.jpg" alt="动漫女孩与委屈表情对比" class="chat-img">
+                <p>从安静睡觉到突然委屈的表情变化，萌度爆表！</p>
+                <p class="date">2023.09.20</p>
+            </div>
+
+            <!-- 聊天记录4 -->
+            <div class="chat-item">
+                <img src="img/快要被气晕的林心璐.jpg" alt="聊天表情包：气死我了" class="chat-img">
+                <p>"气死我了" - 连生气都这么可爱的样子~</p>
+                <p class="date">2024.09.16</p>
+            </div>
+            
+            <!-- 聊天记录5 -->
+            <div class="chat-item">
+                <img src="img/第5张图.jpg" alt="聊天截图：那我还是可爱的" class="chat-img">
+                <p>"那我还是可爱的" - 自信又俏皮的宣言！</p>
+                <p class="date">2023.10.15</p>
+            </div>
+            
+            <!-- 聊天记录6 -->
+            <div class="chat-item">
+                <img src="img/第6张图.jpg" alt="聊天截图：那我还是可爱的" class="chat-img">
+                <p>再次强调"那我还是可爱的" - 确实如此！</p>
+                <p class="date">2023.11.02</p>
+            </div>
+            
+            <!-- 聊天记录7 -->
+            <div class="chat-item">
+                <img src="img/认错的林心璐.jpg" alt="聊天截图：我错了嘛..." class="chat-img">
+                <p>"我错了嘛..." - 撒娇认错的样子让人无法抵抗~</p>
+                <p class="date">2024.01.18</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>制作于 2025年 - 一份特别的生日礼物</p>
+        </footer>
+    </div>
+
+    <script>
+        // 密码验证逻辑
+        const correctPassword = '0526';
+        const overlay = document.getElementById('passwordOverlay');
+        const passwordInput = document.getElementById('passwordInput');
+        const hintText = document.getElementById('hintText');
+
+        // 自动聚焦输入框
+        passwordInput.focus();
+
+        passwordInput.addEventListener('input', function(e) {
+            if (this.value.length === 4) {
+                if (this.value === correctPassword) {
+                    overlay.style.display = 'none';
+                } else {
+                    hintText.innerHTML = '密码错误 ❌ 再想想哦~';
+                    this.value = '';
+                    // 添加错误动画
+                    this.style.animation = 'shake 0.5s';
+                    setTimeout(() => this.style.animation = '', 500);
+                }
+            }
+        });
+
+        // 禁止右键和F12
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if (e.key === 'F12') e.preventDefault();
+        });
+    </script>
+</body>
+</html>
